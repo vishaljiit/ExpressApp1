@@ -12,6 +12,8 @@ nano.db.list(function (err, body) {
         }
        
     });
+    
+    /* If DB is not available create it. Create the design document with view to help in search*/
     if (!isDBAvailable) {
         nano.db.create(dbName, function (err, body) {
             if (!err) {
