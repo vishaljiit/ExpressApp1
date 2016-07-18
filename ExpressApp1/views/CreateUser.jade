@@ -1,0 +1,41 @@
+﻿doctype html
+html
+  head
+    title
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
+  body
+    script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+    script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+    div.container
+        div.row
+            div.col-md-8
+                h3  Create a new customer
+        div.row
+            div.col-md-4
+                form(action="/customers" method="post")
+                    div
+                        label First Name
+                        input(type="text" id="firstName" name="firstName").form-control
+                    div
+                        label Last Name
+                        input(type="text" id="lastName" name="lastName").form-control
+                    div
+                        label Address Line 1
+                        input(type="text" id="addressLine1" name="addressLine1").form-control
+                    div
+                        label Address Line 2
+                        input(type="text" id="addressLine2" name="addressLine2").form-control
+                    div
+                        label City
+                        input(type="text" id="city" name="city").form-control
+                    div
+                        label State
+                        input(type="text" name="state").form-control
+                    div
+                        label country
+                        input(type="text" name="country").form-control
+                    div
+                    button( id="saveBtn").btn-primary.btn Save
+            div.col-md-8
+    
+

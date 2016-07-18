@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+html
+    head
+        meta(charset="utf-8" )
+        title
+
+    body 
+       form(action="/customers/search" method="get")
+            label Type Search
+            input(name="searchTerm" type="text")
+            button Search
+        form(action="/customers/create" method="get")            
+            button Create
+       table(width="100%" border="1" align="center" cellpadding="5" cellspacing="0" style="font-family:arial,helvetica,sans-serif;")          
+            thead
+                tr
+                    td( colspan="4" style="padding:5px;text-align:center;") Customer Id
+                    td( colspan="4" style="padding:5px;text-align:center;") First Name
+                    td( colspan="4" style="padding:5px;text-align:center;") Last Name
+                    td( colspan="4" style="padding:5px;text-align:center;") AddressLine 1
+                    td( colspan="4" style="padding:5px;text-align:center;") AddressLine 2
+                    td( colspan="4" style="padding:5px;text-align:center;") City
+                    td( colspan="4" style="padding:5px;text-align:center;") State
+                    td( colspan="4" style="padding:5px;text-align:center;") Country
+                      
+             tbody
+                
+
+                    each item in CustomerList
+                        tr
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc._id
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.FirstName
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.LastName
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.Address.AddressLine1
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.Address.AddressLine2
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.Address.City
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.Address.State
+                            td( colspan="4" style="padding:5px;text-align:center;")= item.doc.Address.Country
+            
+                            
+                            
