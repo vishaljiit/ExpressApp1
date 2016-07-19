@@ -6,12 +6,19 @@ html
         title
 
     body 
-       form(action="/customers/search" method="get")
+        div Search can be performed on CustomerId, FirstName, LastName and City for sample purpose. To achieve this a view on customers db called composite which create indexes on id, firstname,lastname and city using emit<br/>
+        |implementation details can be found in customers.js in routes folder
+        
+        br
+
+        form(action="/customers/search" method="get")
             label Type Search
             input(name="searchTerm" type="text")
             button Search
+        br
         form(action="/customers/create" method="get")            
-            button Create
+            button Create Customer
+         br
        table(width="100%" border="1" align="center" cellpadding="5" cellspacing="0" style="font-family:arial,helvetica,sans-serif;")          
             thead
                 tr

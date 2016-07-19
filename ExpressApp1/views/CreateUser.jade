@@ -14,11 +14,13 @@ html
             div.col-md-4
                 form(action="/customers" method="post")
                     div
-                        label First Name
-                        input(type="text" id="firstName" name="firstName").form-control
+                        label First Name*
+                        input(type="text" id="firstName" name="firstName" required).form-control
+                        
                     div
-                        label Last Name
-                        input(type="text" id="lastName" name="lastName").form-control
+                        label Last Name*
+                        input(type="text" id="lastName" name="lastName" required).form-control
+                        
                     div
                         label Address Line 1
                         input(type="text" id="addressLine1" name="addressLine1").form-control
